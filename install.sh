@@ -11,7 +11,7 @@ EOF
 
 # Update package list and install necessary packages
 sudo apt update
-sudo apt install -y joe git curl
+sudo apt install -y joe figlet curl lolcat
 
 # Define custom aliases
 declare -A ALIASES
@@ -19,7 +19,7 @@ ALIASES=(
     ["alias c='clear'"]="# Custom Aliases\nalias c='clear'"
     ["alias e='exit'"]="alias e='exit'"
     ["alias update='sudo apt-get update && sudo apt-get upgrade'"]="alias update='sudo apt-get update && sudo apt-get upgrade'"
-    ["alias sudo='please'"]="alias sudo='please'"
+    ["alias sudo='kiyo'"]="alias sudo='kiyo'"
     ["alias add='sudo apt-get install'"]="alias add='sudo apt-get install'"
     ["alias delete='sudo apt-get remove'"]="alias delete='sudo apt-get remove'"
     ["alias customize='cd /etc && sudo nano bash.bashrc'"]="alias customize='cd /etc && sudo nano bash.bashrc'"
@@ -46,7 +46,7 @@ add_missing_aliases() {
 add_missing_aliases
 
 # Create the custom password prompt script
-PASSWORD_PROMPT_SCRIPT="/usr/local/bin/please.sh"
+PASSWORD_PROMPT_SCRIPT="/usr/local/bin/kiyo.sh"
 
 # Create the script content
 cat << 'EOF' | sudo tee "$PASSWORD_PROMPT_SCRIPT" > /dev/null
