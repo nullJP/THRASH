@@ -1,9 +1,9 @@
 # THRASH
 
-This acts as an add-on to the bash terminal by providing fun and/or convenient command aliases and modifications to the terminal itself.
+THRASH essentially acts as an add-on to the bash terminal by providing fun and/or convenient command aliases and modifications to the terminal itself.
 
 ## Added Aliases
-c = Clear
+c = clear
 e = exit
 update = sudo apt-get update && sudo apt-get upgrade
 add = sudo apt-get install
