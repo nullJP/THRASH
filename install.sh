@@ -28,7 +28,7 @@ ALIASES=(
 
 # Function to add missing aliases to /etc/bash.bashrc
 add_missing_aliases() {
-    BASHRC_FILE="/etc/bash.bashrc"
+    BASHRC_FILE="~/.bashrc"
     echo "Checking for missing aliases..."
 
     # Loop through each alias and check if it's present in the bashrc file
