@@ -23,7 +23,7 @@ ALIASES=(
     ["alias kiyo='kiyo.sh'"]="alias kiyo='kiyo.sh'"
     ["alias add='sudo apt-get install'"]="alias add='sudo apt-get install'"
     ["alias delete='sudo apt-get remove'"]="alias delete='sudo apt-get remove'"
-    ["alias customize='cd /etc && sudo nano bash.bashrc'"]="alias customize='cd /etc && sudo nano bash.bashrc'"
+    ["alias customize='sudo joe ~/.bashrc'"]="alias customize='sudo joe ~/.bashrc'"
 )
 
 # Function to add missing aliases to /etc/bash.bashrc
@@ -58,7 +58,9 @@ MAGENTA='\033[0;35m'
 NC='\033[0m' # No Color
 
 # Print the password prompt in magenta without a newline
-sudo -p "$(echo -en ${MAGENTA}What is the Magic Word?: ${NC})" "$@"
+PROMPTS=("What is the Magic Word?" "Password, please?" "Tell me the secret:" "Unlock the door:")
+RANDOM_PROMPT=${PROMPTS[$RANDOM % ${#PROMPTS[@]}]}
+sudo -p "$(echo -en ${MAGENTA}$RANDOM_PROMPT${NC})" "$@"
 EOF
 
 # Make the script executable
