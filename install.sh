@@ -23,12 +23,12 @@ ALIASES=(
     ["alias kiyo='kiyo.sh'"]="alias kiyo='kiyo.sh'"
     ["alias add='sudo apt-get install'"]="alias add='sudo apt-get install'"
     ["alias delete='sudo apt-get remove'"]="alias delete='sudo apt-get remove'"
-    ["alias customize='sudo joe ~/.bashrc'"]="alias customize='sudo joe ~/.bashrc'"
+    ["alias customize='sudo joe $HOME/.bashrc'"]="alias customize='sudo joe $HOME/.bashrc'"
 )
 
 # Function to add missing aliases to /etc/bash.bashrc
 add_missing_aliases() {
-    BASHRC_FILE="~/.bashrc"
+    BASHRC_FILE="$HOME/.bashrc"
     echo "Checking for missing aliases..."
 
     # Loop through each alias and check if it's present in the bashrc file
@@ -58,7 +58,7 @@ MAGENTA='\033[0;35m'
 NC='\033[0m' # No Color
 
 # Print the password prompt in magenta without a newline
-PROMPTS=("What is the Magic Word?" "Password, please?" "Tell me the secret:" "Unlock the door:")
+PROMPTS=("What is the Magic Word?" "Tell me the secret:" "Unlock the door:")
 RANDOM_PROMPT=${PROMPTS[$RANDOM % ${#PROMPTS[@]}]}
 sudo -p "$(echo -en ${MAGENTA}$RANDOM_PROMPT${NC})" "$@"
 EOF
