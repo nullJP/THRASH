@@ -58,7 +58,7 @@ MAGENTA='\033[0;35m'
 NC='\033[0m' # No Color
 
 # Print the password prompt in magenta without a newline
-PROMPTS=("What is the Magic Word?" "Tell me the secret:" "Unlock the door:")
+PROMPTS=("What is the Magic Word?" "Speak the Secret:" "Open the Door:")
 RANDOM_PROMPT=${PROMPTS[$RANDOM % ${#PROMPTS[@]}]}
 sudo -p "$(echo -en ${MAGENTA}$RANDOM_PROMPT${NC})" "$@"
 EOF
