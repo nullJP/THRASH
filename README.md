@@ -1,6 +1,6 @@
 # THRASH
 
-THRASH essentially acts as an add-on to the bash terminal by providing fun and/or convenient command aliases and modifications to the terminal itself.
+THRASH essentially acts as an add-on to the bash terminal. It is simply my setup of fun custom aliases and modifications to bash.
 
 # Install
 - Change to the cloned directory: 
