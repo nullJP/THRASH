@@ -15,12 +15,12 @@ THRASH essentially acts as an add-on to the bash terminal. It is simply my setup
 - After selection, the wizard may ask for your password to make the shell script executable and then run it.
 
 # Added Aliases
-`c = clear`/
-`e = exit`/
-`update = sudo apt-get update && sudo apt-get upgrade`/
-`add = sudo apt-get install`/
-`delete = sudo apt-get remove`/
-`customize = cd /etc && sudo nano bash.bashrc`/
+- `c = clear`
+- `e = exit`
+- `update = sudo apt-get update && sudo apt-get upgrade`
+- `add = sudo apt-get install`
+- `delete = sudo apt-get remove`
+- `customize = cd /etc && sudo nano bash.bashrc`
 
 
 # Kiyo
