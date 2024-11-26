@@ -11,7 +11,7 @@ EOF
 
 # Update package list and install necessary packages
 sudo apt update
-sudo apt install -y joe figlet curl lolcat
+sudo apt install -y joe figlet curl lolcat eza 
 
 # Define custom aliases
 declare -A ALIASES
@@ -46,6 +46,16 @@ add_missing_aliases() {
 # Call the function to add missing aliases
 add_missing_aliases
 
+#line to customize the PS1 Prompt
+# Check if PS1 already contains the custom prompt
+if ! grep -q "PS1=\"\\033[1;36m\\h\\033[0;32m@\\[\\033[0;35m\\]\\\\t\\033[0;31m{\\\\W}\\033[33m ==> \\033[0m\"" "$BASHRC_FILE"; then
+    # Append the custom PS1 to the .bashrc file
+    echo 'PS1="\033[1;36m\h\033[0;32m@\[\033[0;35m\]\t\033[0;31m{\W}\033[33m ==> \033[0m"' | sudo tee -a "$BASHRC_FILE" > /dev/null
+    echo "Custom PS1 prompt added."
+else
+    echo "Custom PS1 prompt already exists."
+fi
+
 # Create the custom password prompt script
 PASSWORD_PROMPT_SCRIPT="/usr/local/bin/kiyo.sh"
 
@@ -72,4 +82,4 @@ if ! sudo grep -q 'Defaults pwfeedback' /etc/sudoers; then
 fi
 
 # Inform the user about changes
-echo "THRASH Installed! Restart terminal to initialize..."
+echo "THRASH Installed! Restart terminal to finalize..."
