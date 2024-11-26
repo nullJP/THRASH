@@ -9,7 +9,10 @@ THRASH essentially acts as an add-on to the bash terminal by providing fun and/o
 `sudo chmod +x install.rb`
 - Now run the wizard: 
 `ruby install.rb`
-
+### The Master Wizard
+- This wizard will ask you which distribution you are running (Arch, Fedora, Debian/Ubuntu).
+- Remember, if you are not running one of these distributions exactly, choose the distro that your OS is based on. (example, Linux mint will choose "Ubuntu/Debian").
+- After selection, the wizard may ask for your password to make the shell script executable and then run it.
 
 # Added Aliases
 c = clear
@@ -21,6 +24,6 @@ customize = cd /etc && sudo nano bash.bashrc
 
 
 # Kiyo
-This is a wrapper that changes the default prompt when a root privileges are required. When you type 'sudo' it will direct to this wrapper as well.
+This is a wrapper that changes the default prompt when root privileges are requested. When you type 'sudo' it will direct to this wrapper as well.
 
 
