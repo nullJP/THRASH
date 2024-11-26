@@ -3,11 +3,11 @@
 THRASH essentially acts as an add-on to the bash terminal by providing fun and/or convenient command aliases and modifications to the terminal itself.
 
 # Install
-- Change to the cloned directory
+- Change to the cloned directory: 
 `cd THRASH`
-- Then make sure that you have execute privileges to run the ruby wizard
+- Then make sure that you have execute privileges to run the ruby wizard: 
 `sudo chmod +x install.rb`
-- Now run the wizard
+- Now run the wizard: 
 `ruby install.rb`
 
 
