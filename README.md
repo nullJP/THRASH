@@ -3,9 +3,13 @@
 THRASH essentially acts as an add-on to the bash terminal by providing fun and/or convenient command aliases and modifications to the terminal itself.
 
 # Install
-Installation is simple. After cloning the repository, be sure you have privilege to run the install.sh file.
-You can do this with: chmod +x install.sh
-After that type ./install.sh and the installation process should start right up!
+-- Change to the cloned directory
+`cd THRASH`
+-- Then make sure that you have execute privileges to run the ruby wizard
+`sudo chmod +x install.rb`
+-- Now run the wizard
+`ruby install.rb`
+
 
 # Added Aliases
 c = clear
