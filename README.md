@@ -10,7 +10,7 @@ THRASH essentially acts as an add-on to the bash terminal by providing fun and/o
 - Now run the wizard: 
 `ruby install.rb`
 ### The Master Wizard
-- This wizard will ask you which distribution you are running (Arch, Fedora, Debian/Ubuntu).
+- This wizard will ask you which distribution you are running (Arch, Fedora, Ubuntu/Debian).
 - Remember, if you are not running one of these distributions exactly, choose the distro that your OS is based on. (example, Linux mint will choose "Ubuntu/Debian").
 - After selection, the wizard may ask for your password to make the shell script executable and then run it.
 
